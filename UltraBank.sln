@@ -1,0 +1,152 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "others", "others", "{6DFCD6B1-B0B4-4B25-91F4-D0BDA2213BED}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3F6D11C8-31C6-4FED-8955-CF4D3B3A9126}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "devops", "devops", "{E78017D0-2B0D-46FF-881E-A6F1E93D921C}"
+	ProjectSection(SolutionItems) = preProject
+		bitbucket-pipelines.yml = bitbucket-pipelines.yml
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tst", "tst", "{6236F603-FA24-43E7-9E4D-AC0D10AF5EF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{3CCA6236-561D-4051-8B64-E71F62311CCF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.WebApi", "src\UltraBank.WebApi\UltraBank.WebApi.csproj", "{16319842-605D-489E-A3DE-22F2BE810F90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.Infrascructure", "src\UltraBank.Infrascructure\UltraBank.Infrascructure.csproj", "{A9A47CF6-0A82-40E0-AB51-9DE37B4F4129}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.Application", "src\UltraBank.Application\UltraBank.Application.csproj", "{C319E9A3-5317-4B68-A47F-867DFA1B47C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.Domain", "src\UltraBank.Domain\UltraBank.Domain.csproj", "{78446260-AA91-44D9-937C-DADF17E433E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.UnitTests", "tst\UltraBank.UnitTests\UltraBank.UnitTests.csproj", "{69650793-8253-4630-BD6D-DA2CFF69D4FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.IntegrationTests", "tst\UltraBank.IntegrationTests\UltraBank.IntegrationTests.csproj", "{C69F664A-63EE-4E8B-ADB3-B3489AC692B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "local", "local", "{C4009FBF-1400-49EC-97F7-61C332A762FE}"
+	ProjectSection(SolutionItems) = preProject
+		devops\local\docker-compose.Local.yaml = devops\local\docker-compose.Local.yaml
+		devops\local\otel-collector-config.yaml = devops\local\otel-collector-config.yaml
+		devops\local\prometheus-config.yml = devops\local\prometheus-config.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sandbox", "sandbox", "{C82437BB-0CAA-4D4C-A658-1BAE6EF85A9F}"
+	ProjectSection(SolutionItems) = preProject
+		devops\sandbox\deploy-sandbox.sh = devops\sandbox\deploy-sandbox.sh
+		devops\sandbox\docker-compose.Sandbox.yaml = devops\sandbox\docker-compose.Sandbox.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "production", "production", "{70D28F25-6673-49EE-8946-EB2F002259EA}"
+	ProjectSection(SolutionItems) = preProject
+		devops\production\deploy-production.sh = devops\production\deploy-production.sh
+		devops\production\docker-compose.Production.yaml = devops\production\docker-compose.Production.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.NotificationContext", "libs\UltraBank.NotificationContext\UltraBank.NotificationContext.csproj", "{87E501F7-363A-4618-AC8E-2E7A8AE28B53}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.ProcessResultContext", "libs\UltraBank.ProcessResultContext\UltraBank.ProcessResultContext.csproj", "{5B44A049-BB44-46F4-8E2A-A5316F18BACF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.AuditableInfoContext", "libs\UltraBank.AuditableInfoContext\UltraBank.AuditableInfoContext.csproj", "{E42E537C-A479-4876-8543-9D40157CFE39}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.ObservabilityContext", "libs\UltraBank.ObservabilityContext\UltraBank.ObservabilityContext.csproj", "{0AE8CC95-CEBD-460B-BC2D-711B5503B093}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.AlertContext", "libs\UltraBank.AlertContext\UltraBank.AlertContext.csproj", "{6ECD3532-0A38-4CAA-8F43-A317B4FC3307}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraBank.EnvironmentContext", "libs\UltraBank.EnvironmentContext\UltraBank.EnvironmentContext.csproj", "{015A0F9C-736A-41C2-BC06-5EC95EB626E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "certificates", "certificates", "{1D620296-F6F8-4304-9EB6-46F7E76A9077}"
+	ProjectSection(SolutionItems) = preProject
+		certificates\CERTIFICATE_HML.crt = certificates\CERTIFICATE_HML.crt
+		certificates\HML.pfx_example = certificates\HML.pfx_example
+		certificates\PRIVATE_KEY_HML.key = certificates\PRIVATE_KEY_HML.key
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16319842-605D-489E-A3DE-22F2BE810F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16319842-605D-489E-A3DE-22F2BE810F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16319842-605D-489E-A3DE-22F2BE810F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16319842-605D-489E-A3DE-22F2BE810F90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9A47CF6-0A82-40E0-AB51-9DE37B4F4129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9A47CF6-0A82-40E0-AB51-9DE37B4F4129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9A47CF6-0A82-40E0-AB51-9DE37B4F4129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9A47CF6-0A82-40E0-AB51-9DE37B4F4129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C319E9A3-5317-4B68-A47F-867DFA1B47C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C319E9A3-5317-4B68-A47F-867DFA1B47C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C319E9A3-5317-4B68-A47F-867DFA1B47C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C319E9A3-5317-4B68-A47F-867DFA1B47C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78446260-AA91-44D9-937C-DADF17E433E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78446260-AA91-44D9-937C-DADF17E433E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78446260-AA91-44D9-937C-DADF17E433E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78446260-AA91-44D9-937C-DADF17E433E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69650793-8253-4630-BD6D-DA2CFF69D4FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69650793-8253-4630-BD6D-DA2CFF69D4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69650793-8253-4630-BD6D-DA2CFF69D4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69650793-8253-4630-BD6D-DA2CFF69D4FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C69F664A-63EE-4E8B-ADB3-B3489AC692B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C69F664A-63EE-4E8B-ADB3-B3489AC692B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C69F664A-63EE-4E8B-ADB3-B3489AC692B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C69F664A-63EE-4E8B-ADB3-B3489AC692B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87E501F7-363A-4618-AC8E-2E7A8AE28B53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87E501F7-363A-4618-AC8E-2E7A8AE28B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87E501F7-363A-4618-AC8E-2E7A8AE28B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87E501F7-363A-4618-AC8E-2E7A8AE28B53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B44A049-BB44-46F4-8E2A-A5316F18BACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B44A049-BB44-46F4-8E2A-A5316F18BACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B44A049-BB44-46F4-8E2A-A5316F18BACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B44A049-BB44-46F4-8E2A-A5316F18BACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E42E537C-A479-4876-8543-9D40157CFE39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E42E537C-A479-4876-8543-9D40157CFE39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E42E537C-A479-4876-8543-9D40157CFE39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E42E537C-A479-4876-8543-9D40157CFE39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AE8CC95-CEBD-460B-BC2D-711B5503B093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AE8CC95-CEBD-460B-BC2D-711B5503B093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AE8CC95-CEBD-460B-BC2D-711B5503B093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AE8CC95-CEBD-460B-BC2D-711B5503B093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ECD3532-0A38-4CAA-8F43-A317B4FC3307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECD3532-0A38-4CAA-8F43-A317B4FC3307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECD3532-0A38-4CAA-8F43-A317B4FC3307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECD3532-0A38-4CAA-8F43-A317B4FC3307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{015A0F9C-736A-41C2-BC06-5EC95EB626E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{015A0F9C-736A-41C2-BC06-5EC95EB626E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{015A0F9C-736A-41C2-BC06-5EC95EB626E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{015A0F9C-736A-41C2-BC06-5EC95EB626E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{16319842-605D-489E-A3DE-22F2BE810F90} = {3F6D11C8-31C6-4FED-8955-CF4D3B3A9126}
+		{A9A47CF6-0A82-40E0-AB51-9DE37B4F4129} = {3F6D11C8-31C6-4FED-8955-CF4D3B3A9126}
+		{C319E9A3-5317-4B68-A47F-867DFA1B47C3} = {3F6D11C8-31C6-4FED-8955-CF4D3B3A9126}
+		{78446260-AA91-44D9-937C-DADF17E433E5} = {3F6D11C8-31C6-4FED-8955-CF4D3B3A9126}
+		{69650793-8253-4630-BD6D-DA2CFF69D4FA} = {6236F603-FA24-43E7-9E4D-AC0D10AF5EF0}
+		{C69F664A-63EE-4E8B-ADB3-B3489AC692B5} = {6236F603-FA24-43E7-9E4D-AC0D10AF5EF0}
+		{C4009FBF-1400-49EC-97F7-61C332A762FE} = {E78017D0-2B0D-46FF-881E-A6F1E93D921C}
+		{C82437BB-0CAA-4D4C-A658-1BAE6EF85A9F} = {E78017D0-2B0D-46FF-881E-A6F1E93D921C}
+		{70D28F25-6673-49EE-8946-EB2F002259EA} = {E78017D0-2B0D-46FF-881E-A6F1E93D921C}
+		{87E501F7-363A-4618-AC8E-2E7A8AE28B53} = {3CCA6236-561D-4051-8B64-E71F62311CCF}
+		{5B44A049-BB44-46F4-8E2A-A5316F18BACF} = {3CCA6236-561D-4051-8B64-E71F62311CCF}
+		{E42E537C-A479-4876-8543-9D40157CFE39} = {3CCA6236-561D-4051-8B64-E71F62311CCF}
+		{0AE8CC95-CEBD-460B-BC2D-711B5503B093} = {3CCA6236-561D-4051-8B64-E71F62311CCF}
+		{6ECD3532-0A38-4CAA-8F43-A317B4FC3307} = {3CCA6236-561D-4051-8B64-E71F62311CCF}
+		{015A0F9C-736A-41C2-BC06-5EC95EB626E3} = {3CCA6236-561D-4051-8B64-E71F62311CCF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {612E430A-7119-42D7-90E4-7853AAB40203}
+	EndGlobalSection
+EndGlobal

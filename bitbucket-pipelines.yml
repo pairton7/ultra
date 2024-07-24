@@ -1,0 +1,26 @@
+pipelines:
+  branches:
+    develop:
+      - step:
+          name: Deploy para Ambiente de Homologação da UltraBank
+          deployment: staging
+          script:
+            - pipe: atlassian/ssh-run:0.8.0
+              variables:
+                SSH_USER: $USER_LOCAWEB_DEVELOP
+                SERVER: $SERVER_LOCAWEB_DEVELOP
+                PORT: 22
+                COMMAND: "/var/www/ultrabank-staging/webapi/devops/sandbox/deploy-sandbox.sh"
+                DEBUG: 'true'
+    main:
+      - step:
+          name: Deploy para Ambiente de Produção da UltraBank
+          deployment: production
+          script:
+            - pipe: atlassian/ssh-run:0.8.0
+              variables:
+                SSH_USER: $USER_HOSTDIME_PROD_02
+                SERVER: $SERVER_HOSTDIME_PROD_02
+                PORT: $PORT_HOSTDIME_PROD
+                COMMAND: "/var/www/ultrabanco/webapi/devops/production/deploy-production.sh"
+                DEBUG: 'true'
